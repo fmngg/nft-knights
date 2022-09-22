@@ -1,0 +1,86 @@
+.howToPlay {
+  display: none;
+  position: relative;
+  padding: 75px;
+  height: 100vh;
+  max-height: 1080px;
+
+  &::before {
+    content: url("../../assets/images/lights.png");
+    display: block;
+    position: absolute;
+    left: -250px;
+    z-index: 2;
+    transform: rotate(270deg);
+  }
+
+  &::after {
+    content: url("../../assets/images/lights.png");
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+  }
+
+  .background {
+    overflow: hidden;
+    border-radius: 100px;
+    background-image: url("../../../public/images/background-3.png");
+    background-size: cover;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    .blur {
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(3px);
+      height: 100%;
+      width: 100%;
+      padding: 50px;
+    }
+
+    .title {
+      margin: 0 auto;
+      font-size: 48px;
+    }
+
+    .description {
+      display: flex;
+      justify-content: space-around;
+
+      p {
+        font-size: 20px;
+      }
+
+      h1 {
+        position: relative;
+      }
+
+      h1::before {
+        content: "";
+        height: 2px;
+        position: absolute;
+        width: 200px;
+        background-color: black;
+        left: 0;
+        bottom: 0;
+      }
+
+      .left {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right {
+        width: 400px;
+
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

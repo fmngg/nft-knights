@@ -1,0 +1,27 @@
+.carousel {
+  width: 50vw;
+  height: 50vh;
+  margin: 0px 20px;
+
+  .swiper {
+    width: 250px;
+    height: 350px;
+
+    .slide {
+      background-color: white;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.swiper-button-next {
+  background-image: url("../../assets/images/arrow.svg");
+}

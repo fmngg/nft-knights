@@ -1,0 +1,46 @@
+.button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 11;
+  color: white;
+  border: 3px solid white;
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+
+  &__invisible {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    user-select: none;
+    z-index: 11;
+    color: white;
+    border: 3px solid white;
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+
+  transition: all 0.2s ease-in-out;
+}

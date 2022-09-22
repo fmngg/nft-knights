@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "1529ChampFleuryW01-Regular";
+}
+
+body {
+  position: relative;
+  display: flex;
+  background: url("../public/images/background.png");
+  width: 100vw;
+  height: 100vh;
+  padding: 0 20px;
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-color: #0c1122;
+  animation: slide 100s linear infinite;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: block;
+  width: 1280px;
+  height: 100%;
+  padding: 25px;
+  justify-content: center;
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    width: 480px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
