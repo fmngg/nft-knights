@@ -8,14 +8,14 @@
 body {
   position: relative;
   display: flex;
-  background: url("../public/images/background.png");
+  background: url("../src/assets/images/layer-base.png");
   width: 100vw;
   height: 100vh;
   padding: 0 20px;
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-color: #0c1122;
-  animation: slide 100s linear infinite;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #020502;
+  background-attachment: fixed;
   justify-content: center;
   overflow-x: hidden;
 }
