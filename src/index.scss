@@ -25,9 +25,24 @@ body {
   display: block;
   width: 1280px;
   height: 100%;
-  padding: 25px;
+  padding: 25px 0px;
   justify-content: center;
 }
+
+// .loading-wrapper {
+//   .loading-title {
+//     color: white;
+//     text-shadow: 0 0 10px #ffff72, 0 0 30px #ffff72, 0 0 80px #ffff72;
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+
+//   .wrapper {
+//     opacity: 0;
+//   }
+// }
 
 @media (max-width: 1280px) {
   .wrapper {
@@ -50,6 +65,11 @@ body {
 @media (max-width: 640px) {
   .wrapper {
     width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    width: 280px;
   }
 }
 

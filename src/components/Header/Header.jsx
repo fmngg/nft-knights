@@ -17,6 +17,8 @@ const Header = () => {
   const { aboutRef, classesRef, howToPlayRef, roadmapRef, showcaseRef } =
     React.useContext(RefContext);
 
+  const [menuActive, setMenuActive] = React.useState(false);
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -24,7 +26,7 @@ const Header = () => {
           Knights <br /> & Dragons
         </h1>
       </div>
-      <ul className={styles.menu}>
+      <ul className={`${styles.menu} ${menuActive ? styles.active : ""}`}>
         <li onClick={() => scrollHandle(aboutRef)}>About</li>
         <li onClick={() => scrollHandle(classesRef)}>Classes</li>
         <li onClick={() => scrollHandle(howToPlayRef)}>How To Play</li>
@@ -34,7 +36,10 @@ const Header = () => {
           <Button title="Join Discord" />
         </li>
       </ul>
-      <div className={styles.mobileButton}>
+      <div
+        className={styles.mobileButton}
+        onClick={() => setMenuActive(!menuActive)}
+      >
         <img src={img} />
       </div>
     </div>
