@@ -38,10 +38,20 @@
   &::after {
     display: flex;
     margin: 10px auto;
-    content: "";
+    content: '';
     display: block;
     height: 30px;
     width: 2px;
     background-color: aliceblue;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }

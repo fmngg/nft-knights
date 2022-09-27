@@ -6,6 +6,7 @@ $text-color: #fff;
   align-items: center;
   user-select: none;
   text-align: center;
+  padding: 0px 15px;
 
   .logo {
     transition: transform 0.3s ease-in-out;
@@ -35,7 +36,7 @@ $text-color: #fff;
       cursor: pointer;
 
       &::after {
-        content: " ";
+        content: ' ';
         display: block;
         width: 0%;
         height: 2px;
@@ -57,6 +58,22 @@ $text-color: #fff;
 
   .mobileButton {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    .logo {
+      h1 {
+        font-size: 22px;
+      }
+    }
+
+    .menu {
+      li {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -85,6 +102,9 @@ $text-color: #fff;
     }
 
     .active {
+      body {
+        overflow: hidden;
+      }
       transform: translate(0%);
       backdrop-filter: blur(10px);
     }

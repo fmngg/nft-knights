@@ -4,7 +4,8 @@
   margin: 0px 20px;
 
   .swiper {
-    width: 50%;
+    display: flex;
+    width: 75%;
     max-width: 250px;
     max-height: 300px;
     height: 75%;
@@ -17,13 +18,10 @@
       display: flex;
 
       img {
-        width: 150px;
+        width: 100%;
+        max-width: 150px;
         height: auto;
       }
     }
   }
-}
-
-.swiper-button-next {
-  background-image: url("../../assets/images/arrow.svg");
 }

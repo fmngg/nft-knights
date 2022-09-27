@@ -3,6 +3,7 @@
   width: 250px;
   height: 300px;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
 
   .role {
     border-radius: 50px;
@@ -64,9 +65,32 @@
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
   .item {
     width: 200px;
     height: 250px;
+  }
+}
+@media (max-width: 1024px) {
+  .item {
+    width: 170px;
+    height: 225px;
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .item {
+    width: 215px;
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .item {
+    width: 180px;
+    height: 225px;
   }
 }

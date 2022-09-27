@@ -57,7 +57,7 @@
         cursor: pointer;
 
         &::after {
-          content: " ";
+          content: ' ';
           display: block;
           width: 0%;
           height: 2px;
@@ -77,5 +77,15 @@
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .right {
+    flex-direction: column;
+
+    li {
+      margin-bottom: 5px;
+    }
   }
 }

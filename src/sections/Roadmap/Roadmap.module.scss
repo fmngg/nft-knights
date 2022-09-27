@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
 
-  background: url("../../assets/images/lights.png");
+  background: url('../../assets/images/lights.png');
   background-size: contain;
 
   &::before {
-    content: url("../../../public/images/background-2.png");
+    content: url('../../../public/images/background-2.png');
     position: absolute;
     display: block;
     top: 0;
@@ -18,7 +18,7 @@
   }
 
   &::after {
-    content: url("../../../public/images/background-2.png");
+    content: url('../../../public/images/background-2.png');
     position: absolute;
     display: block;
     bottom: 0;
@@ -53,8 +53,8 @@
 
       &::after {
         display: flex;
-        margin-left: 65px;
-        content: "";
+        margin: 10px auto;
+        content: '';
         display: block;
         height: 30px;
         width: 2px;

@@ -1,17 +1,17 @@
-import React from "react";
-import { RefContext } from "../../App";
-import Button from "../Button/Button";
-import styles from "./Header.module.scss";
+import React from 'react';
+import { RefContext } from '../../App';
+import Button from '../Button/Button';
+import styles from './Header.module.scss';
 
-import img from "../../assets/images/header/apps.svg";
+import img from '../../assets/images/header/apps.svg';
 
 const Header = () => {
   const scrollHandle = (obj) => {
     window.scrollTo({
       top: obj.current.offsetTop,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
-    console.log(obj);
+    setMenuActive(false);
   };
 
   const { aboutRef, classesRef, howToPlayRef, roadmapRef, showcaseRef } =
@@ -26,7 +26,7 @@ const Header = () => {
           Knights <br /> & Dragons
         </h1>
       </div>
-      <ul className={`${styles.menu} ${menuActive ? styles.active : ""}`}>
+      <ul className={`${styles.menu} ${menuActive ? styles.active : ''}`}>
         <li onClick={() => scrollHandle(aboutRef)}>About</li>
         <li onClick={() => scrollHandle(classesRef)}>Classes</li>
         <li onClick={() => scrollHandle(howToPlayRef)}>How To Play</li>
@@ -36,11 +36,8 @@ const Header = () => {
           <Button title="Join Discord" />
         </li>
       </ul>
-      <div
-        className={styles.mobileButton}
-        onClick={() => setMenuActive(!menuActive)}
-      >
-        <img src={img} />
+      <div className={styles.mobileButton} onClick={() => setMenuActive(!menuActive)}>
+        <img src={img} alt="menu" />
       </div>
     </div>
   );

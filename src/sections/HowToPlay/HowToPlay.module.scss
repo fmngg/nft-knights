@@ -2,11 +2,11 @@
   // display: none;
   position: relative;
   padding: 75px;
-  height: 100vh;
+  height: fit-content;
   max-height: 1080px;
 
   &::before {
-    content: url("../../assets/images/lights.png");
+    content: url('../../assets/images/lights.png');
     display: block;
     position: absolute;
     left: -250px;
@@ -15,7 +15,7 @@
   }
 
   &::after {
-    content: url("../../assets/images/lights.png");
+    content: url('../../assets/images/lights.png');
     display: block;
     position: absolute;
     top: 0;
@@ -26,7 +26,7 @@
   .background {
     overflow: hidden;
     border-radius: 100px;
-    background-image: url("../../../public/images/background-3.png");
+    background-image: url('../../../public/images/background-3.png');
     background-size: cover;
     background-color: aliceblue;
     height: 100%;
@@ -52,6 +52,7 @@
       justify-content: space-around;
 
       p {
+        padding: 0 15px;
         font-size: 20px;
       }
 
@@ -60,7 +61,7 @@
       }
 
       h1::before {
-        content: "";
+        content: '';
         height: 2px;
         position: absolute;
         width: 200px;
@@ -80,6 +81,92 @@
 
         display: flex;
         flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .howToPlay {
+    .background {
+      .blur {
+        padding: 25px;
+      }
+      .title {
+        font-size: 35px;
+      }
+      .description {
+        h1 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .howToPlay {
+    .background {
+      .title {
+        font-size: 30px;
+      }
+      .description {
+        h1 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .howToPlay {
+    padding: 75px 0px;
+    .background {
+      .description {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .howToPlay {
+    .background {
+      border-radius: 50px;
+
+      .blur {
+        padding: 10px;
+      }
+
+      .title {
+        font-size: 25px;
+      }
+      .description {
+        flex-direction: row;
+
+        h1 {
+          font-size: 18px;
+
+          &::before {
+            content: '';
+            height: 2px;
+            position: absolute;
+            width: 100px;
+            background-color: black;
+            left: 0;
+            bottom: 0;
+          }
+        }
+
+        p {
+          font-size: 13px;
+        }
       }
     }
   }

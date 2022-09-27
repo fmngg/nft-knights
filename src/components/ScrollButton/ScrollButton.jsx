@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
-import classNames from "classnames";
+import React, { useEffect } from 'react';
+import classNames from 'classnames';
 
-import styles from "./ScrollButton.module.scss";
+import styles from './ScrollButton.module.scss';
+import { RefContext } from '../../App';
 
 const ScrollButton = () => {
+  const { classesRef } = React.useContext(RefContext);
   const [visible, setVisible] = React.useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 700) {
+    if (window.scrollY > classesRef.current.offsetTop) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -15,7 +17,7 @@ const ScrollButton = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -23,14 +25,13 @@ const ScrollButton = () => {
       onClick={() =>
         window.scrollTo({
           top: 0,
-          behavior: "smooth",
+          behavior: 'smooth',
         })
       }
       className={classNames({
         [styles.button]: visible === true,
         [styles.button__invisible]: visible === false,
-      })}
-    >
+      })}>
       <p>UP!</p>
     </div>
   );

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./ShowcaseItem.module.scss";
-import ethereum from "../../assets/images/nfts/ethereum.svg";
+import styles from './ShowcaseItem.module.scss';
+import ethereum from '../../assets/images/nfts/ethereum.svg';
 
 const ShowcaseItem = ({ img, id }) => {
   return (
@@ -15,8 +15,7 @@ const ShowcaseItem = ({ img, id }) => {
         <div className={styles.right}>
           <p>Price</p>
           <div className={styles.price}>
-            <img src={ethereum} />
-            <h1>1.0</h1>
+            <h1>1.0 ETH</h1>
           </div>
         </div>
       </div>

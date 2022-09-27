@@ -1,7 +1,7 @@
 .classes {
-  height: 100vh;
+  height: fit-content;
   color: white;
-  background: url("../../../public/images/background-2.png");
+  background: url('../../../public/images/background-2.png');
   background-size: contain;
   // display: none;
 
@@ -31,12 +31,13 @@
     .button {
       position: relative;
       margin: 0 auto;
+      z-index: 3;
 
       &::after {
         box-shadow: 0 0 10px #ffff72, 0 0 30px #ffff72, 0 0 80px #ffff72;
         animation: glow 5s linear infinite;
 
-        content: "";
+        content: '';
         transform: scaleX(0.9);
         border-radius: 10px;
         z-index: -1;
@@ -58,6 +59,37 @@
       }
       100% {
         box-shadow: 0 0 5px #ffff72, 0 0 10px #ffff72, 0 0 20px #ffff72;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .classes {
+    .blur {
+      .roles {
+        justify-content: space-around;
+      }
+      .title {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) and (max-height: 800px) {
+  .classes {
+    .blur {
+      padding: 5px 0px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .classes {
+    .blur {
+      .title {
+        font-size: 24px;
       }
     }
   }
